@@ -83,6 +83,16 @@ type IssueFields struct {
 	Updated string `json:"updated"`
 }
 
+// IssueTypeField holds issue field info.
+type IssueTypeField struct {
+	Name   string `json:"name"`
+	Key    string `json:"key"`
+	Schema struct {
+		DataType string `json:"type"`
+	} `json:"schema"`
+	FieldID string `json:"fieldId,omitempty"`
+}
+
 // IssueType holds issue type info.
 type IssueType struct {
 	ID      string `json:"id"`
